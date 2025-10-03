@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -54,6 +54,126 @@
         <p>&copy; 2025 Company. All rights reserved.</p>
       </div>
     </footer>
+  </div>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FAQ</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="page-frame">
+    <header>
+      <div class="container header">
+        <div class="logo">
+          <h2><span class="logo-mark">COMPANY</span><br><small>business tagline</small></h2>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="data.html">All Data</a></li>
+          </ul>
+        </nav>
+        <a href="#" class="btn btn-quote">Get A Quote</a>
+      </div>
+    </header>
+    <section class="what-you-get">
+      <div class="container what-card">
+        <div class="what-header">
+          <h2>FAQ</h2>
+          <p class="sub">Frequently Asked Questions</p>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h3>How long does it take?</h3>
+            <p>Most resumes are delivered within 3 business days.</p>
+          </div>
+          <div class="card">
+            <h3>Do you offer revisions?</h3>
+            <p>Yes, we offer up to 2 free revisions per order.</p>
+          </div>
+          <div class="card">
+            <h3>Is my information confidential?</h3>
+            <p>Absolutely. Your data is safe and private.</p>
+          </div>
+          <div class="card">
+            <h3>What formats do you deliver?</h3>
+            <p>We provide resumes in PDF and Word formats for easy editing and sharing.</p>
+          </div>
+          <div class="card">
+            <h3>Can I request a rush order?</h3>
+            <p>Yes, expedited delivery is available for an additional fee. Contact us for details.</p>
+          </div>
+          <div class="card">
+            <h3>Do you write resumes for all industries?</h3>
+            <p>Yes, our experts have experience across various fields and job levels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="background:#f9f9f9; padding:32px 0;">
+      <div class="container" style="text-align:center;">
+        <h2 style="color:#d81b60; margin-bottom:12px;">Still Have Questions?</h2>
+        <p style="font-size:15px; color:#444; margin-bottom:18px;">
+          If you need more information or have a specific question, please <a href="#" class="btn btn-outline">Contact Us</a> or click <strong>Get A Quote</strong> for a quick response.
+        </p>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Company. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Enquiry Modal -->
+    <div id="enquiryModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.3); z-index:999; align-items:center; justify-content:center;">
+      <div style="background:#fff; padding:32px 24px; border-radius:12px; max-width:360px; width:90%; box-shadow:0 8px 32px rgba(0,0,0,0.12); position:relative;">
+        <button id="closeModal" style="position:absolute; top:12px; right:12px; background:none; border:none; font-size:20px; cursor:pointer;">&times;</button>
+        <h2 style="margin-bottom:12px;">Enquiry Form</h2>
+        <form id="enquiryForm">
+          <input type="text" name="name" placeholder="Your Name" required style="width:100%; margin-bottom:10px; padding:8px;">
+          <input type="email" name="email" placeholder="Your Email" required style="width:100%; margin-bottom:10px; padding:8px;">
+          <textarea name="details" placeholder="Additional Details" required style="width:100%; margin-bottom:10px; padding:8px;"></textarea>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
+        </form>
+        <div id="thankYouMsg" style="display:none; text-align:center; margin-top:18px;">
+          <strong>Thank you for your enquiry!</strong>
+          <p>We will get back to you soon.</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    // Show modal on Get A Quote click
+    document.querySelector('.btn-quote').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('enquiryModal').style.display = 'flex';
+    });
+
+    // Close modal
+    document.getElementById('closeModal').onclick = function() {
+      document.getElementById('enquiryModal').style.display = 'none';
+      document.getElementById('enquiryForm').style.display = 'block';
+      document.getElementById('thankYouMsg').style.display = 'none';
+    };
+
+    // Handle form submit
+    document.getElementById('enquiryForm').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('enquiryForm').style.display = 'none';
+      document.getElementById('thankYouMsg').style.display = 'block';
+    };
+    </script>
   </div>
 </body>
 </html>
